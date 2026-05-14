@@ -22,3 +22,9 @@
 [submodule "branding"]
 	path = branding
 	url = git@github.com:centrexos/centrex-branding.git
+[submodule "desktop-gnome"]
+	path = desktop-gnome
+	url = git@github.com:centrexos/centrex-desktop-gnome.git
+[submodule "desktop-kde"]
+	path = desktop-kde
+	url = git@github.com:centrexos/centrex-desktop-kde.git
