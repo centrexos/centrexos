@@ -1,0 +1,24 @@
+[submodule "core"]
+	path = core
+	url = git@github.com:centrexos/centrex-core.git
+[submodule "cxpkg"]
+	path = cxpkg
+	url = git@github.com:centrexos/cxpkg.git
+[submodule "installer"]
+	path = installer
+	url = git@github.com:centrexos/centrex-installer.git
+[submodule "kernel"]
+	path = kernel
+	url = git@github.com:centrexos/centrex-kernel.git
+[submodule "tooling"]
+	path = tooling
+	url = git@github.com:centrexos/centrex-tooling.git
+[submodule "metadata"]
+	path = metadata
+	url = git@github.com:centrexos/centrex-metadata.git
+[submodule "docs"]
+	path = docs
+	url = git@github.com:centrexos/centrex-docs.git
+[submodule "branding"]
+	path = branding
+	url = git@github.com:centrexos/centrex-branding.git
