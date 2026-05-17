@@ -1,9 +1,6 @@
 [submodule "core"]
 	path = core
 	url = git@github.com:centrexos/centrex-core.git
-[submodule "cxpkg"]
-	path = cxpkg
-	url = git@github.com:centrexos/cxpkg.git
 [submodule "installer"]
 	path = installer
 	url = git@github.com:centrexos/centrex-installer.git
