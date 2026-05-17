@@ -25,6 +25,3 @@
 [submodule "desktop-kde"]
 	path = desktop-kde
 	url = git@github.com:centrexos/centrex-desktop-kde.git
-[submodule "cxp"]
-	path = cxp
-	url = git@github.com:centrexos/cxp.git
