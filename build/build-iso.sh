@@ -97,6 +97,8 @@ require_file "$ROOT_DIR/installer/target/release/centrex-installer"
 KERNEL_BUILD_JSON="$ROOT_DIR/kernel/output/$SERIES/build.json"
 if [[ -f "$KERNEL_BUILD_JSON" ]]; then
     KVER=$(jq -r .kver "$KERNEL_BUILD_JSON")
+    [[ -n "$KVER" && "$KVER" != "null" ]] \
+        || error "build.json for series $SERIES has an empty or missing 'kver' field. Re-run: make kernel SERIES=$SERIES"
     KERNEL_VMLINUZ="$ROOT_DIR/kernel/output/$SERIES/boot/vmlinuz-${KVER}"
     KERNEL_SYSMAP="$ROOT_DIR/kernel/output/$SERIES/boot/System.map-${KVER}"
     KERNEL_MODULES="$ROOT_DIR/kernel/output/$SERIES/modules/lib/modules/${KVER}"
@@ -141,9 +143,11 @@ if $USE_CUSTOM_KERNEL; then
     mount --bind /dev/pts "$ROOTFS/dev/pts"
     mount --bind /proc    "$ROOTFS/proc"
     mount --bind /sys     "$ROOTFS/sys"
+    # resolv.conf so apt can reach the mirror inside the chroot
+    cp /etc/resolv.conf "$ROOTFS/etc/resolv.conf"
 
-    chroot_run update-initramfs -c -k "$KVER" || \
-        warn "update-initramfs failed — initrd may be missing"
+    chroot_run apt-get install -y --no-install-recommends initramfs-tools kmod
+    chroot_run update-initramfs -c -k "$KVER"
 
     umount -l "$ROOTFS/sys"  2>/dev/null || true
     umount -l "$ROOTFS/proc" 2>/dev/null || true
@@ -417,8 +421,7 @@ grub-mkrescue \
     --output="$OUTPUT_DIR/$ISO_NAME" \
     "$ISO_STAGING" \
     -- \
-    -volid "$ISO_LABEL" \
-    -r
+    -volid "$ISO_LABEL"
 
 # ── Done ─────────────────────────────────────────────────────────────────────
 ISO_SIZE=$(du -sh "$OUTPUT_DIR/$ISO_NAME" | cut -f1)

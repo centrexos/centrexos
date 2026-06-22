@@ -125,12 +125,12 @@ Each top-level directory under `core/`, `cxpkg/`, `installer/`, `kernel/`, `desk
 sudo apt install git make curl jq cargo rustup \
     build-essential debootstrap xorriso squashfs-tools \
     grub-pc-bin grub-efi-amd64-bin mtools \
-    gcc bison flex bc dwarves pahole xz-utils libssl-dev libelf-dev
+    gcc bison flex bc dwarves pahole xz-utils libssl-dev libelf-dev shellcheck
 
 # Fedora
 sudo dnf install git make curl jq cargo rustup gcc bison flex bc \
     dwarves pahole xz openssl-devel elfutils-libelf-devel \
-    xorriso squashfs-tools grub2-tools grub2-pc grub2-efi-x64
+    xorriso squashfs-tools grub2-tools grub2-pc grub2-efi-x64 shellcheck
 ```
 
 ### Full system build (recommended)

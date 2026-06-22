@@ -156,13 +156,13 @@ if [[ $FAIL -gt 0 ]]; then
     echo "        debootstrap xorriso squashfs-tools \\"
     echo "        grub-pc-bin grub-efi-amd64-bin mtools \\"
     echo "        gcc bison flex bc dwarves pahole xz-utils \\"
-    echo "        libssl-dev libelf-dev"
+    echo "        libssl-dev libelf-dev shellcheck"
     echo ""
     echo "  Fedora / RHEL:"
     echo "    sudo dnf install git make curl jq gcc bison flex bc \\"
     echo "        dwarves pahole xz openssl-devel elfutils-libelf-devel \\"
     echo "        xorriso squashfs-tools \\"
-    echo "        grub2-tools grub2-pc grub2-efi-x64 mtools"
+    echo "        grub2-tools grub2-pc grub2-efi-x64 mtools shellcheck"
     echo ""
     exit 1
 fi
