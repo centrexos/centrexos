@@ -13,6 +13,7 @@
         build build-core build-cxpkg build-installer \
         kernel kernel-all kernel-list kernel-status kernel-install kernel-prune \
         iso \
+        container container-release \
         install install-bins install-kernel \
         test fmt check check-deps \
         bootstrap sync \
@@ -118,12 +119,30 @@ kernel-prune:
 	$(MAKE) -C kernel prune KEEP=$(KEEP)
 
 # ---------------------------------------------------------------------------
-# Stage 6 — ISO
+# Stage 6 — ISO  (requires root via sudo)
 # ---------------------------------------------------------------------------
 iso:
 	@chmod +x build/build-iso.sh
-	@VERSION=$(VERSION) ARCH=$(ARCH) DESKTOP=$(DESKTOP) SERIES=$(SERIES) \
+	@sudo VERSION=$(VERSION) ARCH=$(ARCH) DESKTOP=$(DESKTOP) SERIES=$(SERIES) \
 	    ./build/build-iso.sh
+
+# ---------------------------------------------------------------------------
+# Container image (no root required — uses docker build)
+# ---------------------------------------------------------------------------
+container: build
+	@chmod +x build/build-container.sh
+	@VERSION=$(VERSION) ARCH=$(ARCH) OUTPUT_DIR=$(ROOT_DIR)/releases \
+	    ./build/build-container.sh
+
+# dist + container release (ISO + container image in one pass)
+container-release: dist container
+	@echo ""
+	@echo "\033[1;32m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+	@echo "\033[1;32m  CentrexOS $(VERSION) — full release complete\033[0m"
+	@echo "\033[1;32m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+	@echo "  ISO:       releases/centrexos-$(VERSION)-$(ARCH).iso"
+	@echo "  Container: releases/centrexos-$(VERSION)-container.tar.gz"
+	@echo ""
 
 # ---------------------------------------------------------------------------
 # Install to live system (requires root)
@@ -131,13 +150,13 @@ iso:
 install: install-bins
 
 install-bins: build
-	install -m 755 $(CORE_BIN)      /usr/local/bin/centrex-core
-	install -m 755 $(CXPKG_BIN)     /usr/local/bin/cxpkg
-	install -m 755 $(INSTALLER_BIN) /usr/local/bin/centrex-installer
+	sudo install -m 755 $(CORE_BIN)      /usr/local/bin/centrex-core
+	sudo install -m 755 $(CXPKG_BIN)     /usr/local/bin/cxpkg
+	sudo install -m 755 $(INSTALLER_BIN) /usr/local/bin/centrex-installer
 	@echo "Installed binaries to /usr/local/bin"
 
 install-kernel:
-	$(MAKE) -C kernel install SERIES=$(SERIES) JOBS=$(JOBS)
+	sudo $(MAKE) -C kernel install SERIES=$(SERIES) JOBS=$(JOBS)
 
 # ---------------------------------------------------------------------------
 # Quality checks
@@ -186,7 +205,7 @@ help:
 	@echo "  ─────────────────────────────────────────────────────────────"
 	@echo ""
 	@echo "  \033[1mFull system build:\033[0m"
-	@echo "    make dist                   Full pipeline: deps → sync → build → kernel → ISO"
+	@echo "    make dist                   Full pipeline: deps → sync → build → kernel → ISO  [needs sudo]"
 	@echo "    make dist  SERIES=7.0       Use 7.0 testing kernel"
 	@echo "    make dist  DESKTOP=gnome    Build GNOME desktop variant"
 	@echo "    make dist  VERSION=0.2.0    Tag the release with a version"
@@ -203,9 +222,14 @@ help:
 	@echo "    make kernel                 Build kernel (series: $(SERIES))"
 	@echo "    make kernel  SERIES=7.0     Build a specific kernel series"
 	@echo "    make kernel-all             Build every kernel series"
-	@echo "    make iso                    Assemble ISO from pre-built artifacts"
+	@echo "    make iso                    Assemble ISO from pre-built artifacts  [sudo inside]"
 	@echo ""
-	@echo "  \033[1mSystem install (requires root):\033[0m"
+	@echo "  \033[1mContainer (no root required):\033[0m"
+	@echo "    make container              Build Docker image → releases/*.tar.gz"
+	@echo "    make container VERSION=0.3.0  Tag the container image"
+	@echo "    make container-release      dist + container in one pass"
+	@echo ""
+	@echo "  \033[1mSystem install (sudo inside):\033[0m"
 	@echo "    make install                Install binaries to /usr/local/bin"
 	@echo "    make install-kernel         Build + install kernel to /boot"
 	@echo "    make kernel-prune           Remove old kernels (keep=$(KEEP))"
