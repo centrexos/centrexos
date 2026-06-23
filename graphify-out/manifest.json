@@ -1,58 +1,482 @@
 {
-  "/home/raisul/Lab/centrexos/core/src/main.rs": 1780302028.0985096,
-  "/home/raisul/Lab/centrexos/core/src/bootstrapper.rs": 1780302043.40676,
-  "/home/raisul/Lab/centrexos/core/src/translator.rs": 1780302063.3640864,
-  "/home/raisul/Lab/centrexos/cxpkg/src/error.rs": 1780301770.2202902,
-  "/home/raisul/Lab/centrexos/cxpkg/src/config.rs": 1780301805.0878606,
-  "/home/raisul/Lab/centrexos/cxpkg/src/cli.rs": 1780301950.2684493,
-  "/home/raisul/Lab/centrexos/cxpkg/src/main.rs": 1780301999.5190418,
-  "/home/raisul/Lab/centrexos/cxpkg/src/package/metadata.rs": 1780301794.04768,
-  "/home/raisul/Lab/centrexos/cxpkg/src/package/mod.rs": 1780304265.3656056,
-  "/home/raisul/Lab/centrexos/cxpkg/src/backend/mod.rs": 1780301825.4871943,
-  "/home/raisul/Lab/centrexos/cxpkg/src/backend/apt.rs": 1780301854.250665,
-  "/home/raisul/Lab/centrexos/cxpkg/src/backend/dnf.rs": 1780301880.6913033,
-  "/home/raisul/Lab/centrexos/cxpkg/src/backend/flatpak.rs": 1780301904.4444804,
-  "/home/raisul/Lab/centrexos/cxpkg/src/resolver/mod.rs": 1780304269.6686373,
-  "/home/raisul/Lab/centrexos/desktop-kde/kwin/scripts/centrex-kwin-rules.js": 1780311323.4122987,
-  "/home/raisul/Lab/centrexos/installer/src/main.rs": 1780310716.6467009,
-  "/home/raisul/Lab/centrexos/installer/src/disk/probe.rs": 1780310428.689146,
-  "/home/raisul/Lab/centrexos/installer/src/disk/partition.rs": 1780310457.463601,
-  "/home/raisul/Lab/centrexos/installer/src/disk/format.rs": 1780310466.7837486,
-  "/home/raisul/Lab/centrexos/installer/src/disk/mod.rs": 1780311951.9552689,
-  "/home/raisul/Lab/centrexos/installer/src/install/mod.rs": 1780310471.1908183,
-  "/home/raisul/Lab/centrexos/installer/src/install/deploy.rs": 1780310494.9340534,
-  "/home/raisul/Lab/centrexos/installer/src/install/bootloader.rs": 1780310520.852604,
-  "/home/raisul/Lab/centrexos/installer/src/install/fstab.rs": 1780310540.0400217,
-  "/home/raisul/Lab/centrexos/installer/src/install/chroot.rs": 1780310559.9509416,
-  "/home/raisul/Lab/centrexos/installer/src/config/mod.rs": 1780310566.7989078,
-  "/home/raisul/Lab/centrexos/installer/src/config/locale.rs": 1780310578.4235146,
-  "/home/raisul/Lab/centrexos/installer/src/config/user.rs": 1780310589.1776845,
-  "/home/raisul/Lab/centrexos/installer/src/config/network.rs": 1780310597.8419807,
-  "/home/raisul/Lab/centrexos/installer/src/ui/mod.rs": 1780310602.3248925,
-  "/home/raisul/Lab/centrexos/installer/src/ui/app.rs": 1780310624.4252422,
-  "/home/raisul/Lab/centrexos/installer/src/ui/welcome.rs": 1780310640.1401517,
-  "/home/raisul/Lab/centrexos/installer/src/ui/disk.rs": 1780310656.466749,
-  "/home/raisul/Lab/centrexos/installer/src/ui/locale.rs": 1780310669.4059536,
-  "/home/raisul/Lab/centrexos/installer/src/ui/user.rs": 1780310684.9742,
-  "/home/raisul/Lab/centrexos/installer/src/ui/progress.rs": 1780310711.7056227,
-  "/home/raisul/Lab/centrexos/installer/src/ui/summary.rs": 1780311965.067477,
-  "/home/raisul/Lab/centrexos/CONTRIBUTING.md": 1780313275.18164,
-  "/home/raisul/Lab/centrexos/README.md": 1780315845.9810019,
-  "/home/raisul/Lab/centrexos/branding/README.md": 1780313604.3719547,
-  "/home/raisul/Lab/centrexos/branding/grub/centrex-theme/theme.txt": 1780311672.1818285,
-  "/home/raisul/Lab/centrexos/core/README.md": 1780301664.8303072,
-  "/home/raisul/Lab/centrexos/cxpkg/README.md": 1780313516.5395758,
-  "/home/raisul/Lab/centrexos/desktop-gnome/README.md": 1780313682.4591806,
-  "/home/raisul/Lab/centrexos/desktop-kde/README.md": 1780313663.3798811,
-  "/home/raisul/Lab/centrexos/docs/architecture.md": 1780313355.7049549,
-  "/home/raisul/Lab/centrexos/docs/getting-started.md": 1780313403.0567281,
-  "/home/raisul/Lab/centrexos/docs/developer-guide.md": 1780313485.5300748,
-  "/home/raisul/Lab/centrexos/docs/README.md": 1780313701.7001507,
-  "/home/raisul/Lab/centrexos/installer/README.md": 1780313551.3651226,
-  "/home/raisul/Lab/centrexos/kernel/README.md": 1780315325.8129354,
-  "/home/raisul/Lab/centrexos/metadata/README.md": 1780313643.9705765,
-  "/home/raisul/Lab/centrexos/tooling/README.md": 1780313623.9262617,
-  "/home/raisul/Lab/centrexos/tooling/ci/build.yml": 1780311599.7966797,
-  "/home/raisul/Lab/centrexos/branding/logo/centrexos.svg": 1780311618.2519724,
-  "/home/raisul/Lab/centrexos/branding/logo/centrexos-white.svg": 1780311625.291518
+  ".claude/settings.local.json": {
+    "mtime": 1782240171.176852,
+    "ast_hash": "3abec0dc12c20698e345a75f55ddb2ba",
+    "semantic_hash": ""
+  },
+  "branding/colors.json": {
+    "mtime": 1782144921.1265783,
+    "ast_hash": "5a628d2b27f301ba4bf4d194e7b3563e",
+    "semantic_hash": ""
+  },
+  "branding/install.sh": {
+    "mtime": 1782144921.1272922,
+    "ast_hash": "368e46cfc568caca544e85a14caf60ab",
+    "semantic_hash": ""
+  },
+  "containers/entrypoint.sh": {
+    "mtime": 1782236506.5919647,
+    "ast_hash": "30d2bd06ebe56ac73e867eeb8e0e0e73",
+    "semantic_hash": ""
+  },
+  "core/cxp/src/backend/apt.rs": {
+    "mtime": 1782144939.8542342,
+    "ast_hash": "2fac57c2e04b3bd562ff0c753e37e3d2",
+    "semantic_hash": ""
+  },
+  "core/cxp/src/backend/dnf.rs": {
+    "mtime": 1782144939.8542848,
+    "ast_hash": "428199248ed1ec2aab2bad1bc7c71d1a",
+    "semantic_hash": ""
+  },
+  "core/cxp/src/backend/mod.rs": {
+    "mtime": 1782144939.8542848,
+    "ast_hash": "ec327264999f6443ce07b9eabe077cab",
+    "semantic_hash": ""
+  },
+  "core/cxp/src/backend/traits.rs": {
+    "mtime": 1782144939.8542848,
+    "ast_hash": "4fe3a7efa8b61d785f3cb34772c9b979",
+    "semantic_hash": ""
+  },
+  "core/cxp/src/cli.rs": {
+    "mtime": 1782144939.8542848,
+    "ast_hash": "76d84ce75d22195fdc5e6b1603a6c4d1",
+    "semantic_hash": ""
+  },
+  "core/cxp/src/commands/install.rs": {
+    "mtime": 1782144939.8542848,
+    "ast_hash": "fb0110358944af0b319ae3fc8068f89f",
+    "semantic_hash": ""
+  },
+  "core/cxp/src/commands/mod.rs": {
+    "mtime": 1782144939.854451,
+    "ast_hash": "8663bbc991efcdc1c0ed70e5bfd773ee",
+    "semantic_hash": ""
+  },
+  "core/cxp/src/commands/remove.rs": {
+    "mtime": 1782144939.854451,
+    "ast_hash": "235971fedc2619617ad9e5540662732e",
+    "semantic_hash": ""
+  },
+  "core/cxp/src/commands/search.rs": {
+    "mtime": 1782144939.854451,
+    "ast_hash": "9a78a3b5c8e53b355986748e45204918",
+    "semantic_hash": ""
+  },
+  "core/cxp/src/commands/update.rs": {
+    "mtime": 1782144939.854451,
+    "ast_hash": "c8f92df66947876d1e1638f5eb9a818f",
+    "semantic_hash": ""
+  },
+  "core/cxp/src/main.rs": {
+    "mtime": 1782144939.854451,
+    "ast_hash": "2c07c5e5642ca7eed5eaf5ca1beccae9",
+    "semantic_hash": ""
+  },
+  "core/cxp/src/package.rs": {
+    "mtime": 1782144939.854451,
+    "ast_hash": "9ce871666c18eb564286aaf8dcad5a86",
+    "semantic_hash": ""
+  },
+  "core/cxp/src/resolver/mod.rs": {
+    "mtime": 1782144939.854451,
+    "ast_hash": "2091aaa8a4d590d9030dd7f5684ff429",
+    "semantic_hash": ""
+  },
+  "core/cxp/src/resolver/resolver.rs": {
+    "mtime": 1782144939.8546433,
+    "ast_hash": "c1b209048ae5baa06deded117d5cda51",
+    "semantic_hash": ""
+  },
+  "core/src/api.rs": {
+    "mtime": 1782236458.64394,
+    "ast_hash": "791e8c30eddc90401ca017be8b8cb009",
+    "semantic_hash": ""
+  },
+  "core/src/bootstrapper.rs": {
+    "mtime": 1782144921.2705796,
+    "ast_hash": "71714f1ab702b3b72d682eb6ba4cc885",
+    "semantic_hash": ""
+  },
+  "core/src/main.rs": {
+    "mtime": 1782236482.5942092,
+    "ast_hash": "e1b8b027e73c8c5a8cb5a4ce221fcbf2",
+    "semantic_hash": ""
+  },
+  "core/src/translator.rs": {
+    "mtime": 1782144921.271796,
+    "ast_hash": "b6390463594c687bcda40437029fb972",
+    "semantic_hash": ""
+  },
+  "cxpkg/src/backend/apt.rs": {
+    "mtime": 1782148443.6643605,
+    "ast_hash": "dd1c27dae5a46a1303e180a38dbce3d3",
+    "semantic_hash": ""
+  },
+  "cxpkg/src/backend/dnf.rs": {
+    "mtime": 1782148258.7785537,
+    "ast_hash": "623624209690884d5f15107afd628e79",
+    "semantic_hash": ""
+  },
+  "cxpkg/src/backend/flatpak.rs": {
+    "mtime": 1782148277.8148828,
+    "ast_hash": "3f81cc05e2455ccbadb94782fc937d87",
+    "semantic_hash": ""
+  },
+  "cxpkg/src/backend/mod.rs": {
+    "mtime": 1782148220.7743685,
+    "ast_hash": "6b926304303e30607f36d4e94060c24c",
+    "semantic_hash": ""
+  },
+  "cxpkg/src/cli.rs": {
+    "mtime": 1782148306.040136,
+    "ast_hash": "a5d09f791fc2cb7ce6e84f1374908eb0",
+    "semantic_hash": ""
+  },
+  "cxpkg/src/config.rs": {
+    "mtime": 1782148197.4941576,
+    "ast_hash": "8552635bf621d7621a9de57f60f11910",
+    "semantic_hash": ""
+  },
+  "cxpkg/src/error.rs": {
+    "mtime": 1782148186.3785875,
+    "ast_hash": "184061120fd2c994c7b53631be28b53a",
+    "semantic_hash": ""
+  },
+  "cxpkg/src/main.rs": {
+    "mtime": 1782148339.168126,
+    "ast_hash": "2b2dfb9d26b22d656020da1b502a2ed1",
+    "semantic_hash": ""
+  },
+  "cxpkg/src/package/metadata.rs": {
+    "mtime": 1782148206.1022356,
+    "ast_hash": "15ebc164050c1a5d7f07f93c4edc2bdb",
+    "semantic_hash": ""
+  },
+  "cxpkg/src/package/mod.rs": {
+    "mtime": 1782148210.7382777,
+    "ast_hash": "dd6eb6fe5e498549a08decc59f070807",
+    "semantic_hash": ""
+  },
+  "cxpkg/src/resolver/mod.rs": {
+    "mtime": 1782148295.496458,
+    "ast_hash": "7625a4c13e3d6327ddda4f6d452aeb46",
+    "semantic_hash": ""
+  },
+  "desktop-kde/kwin/scripts/centrex-kwin-rules.js": {
+    "mtime": 1782144939.8701043,
+    "ast_hash": "879e4e490aa485d7831ed71a79158dff",
+    "semantic_hash": ""
+  },
+  "desktop-kde/plasma/look-and-feel/com.centrexos.desktop/metadata.json": {
+    "mtime": 1782144939.8702404,
+    "ast_hash": "4dfd53153f9e35532092f79802f8f18e",
+    "semantic_hash": ""
+  },
+  "installer/src/config/locale.rs": {
+    "mtime": 1782144939.8861449,
+    "ast_hash": "7ddb36fe98c0dff08a64c0cd77a261ed",
+    "semantic_hash": ""
+  },
+  "installer/src/config/mod.rs": {
+    "mtime": 1782144939.8862112,
+    "ast_hash": "f50f5e00fc58ee96614c0a64a839293a",
+    "semantic_hash": ""
+  },
+  "installer/src/config/network.rs": {
+    "mtime": 1782144939.8862112,
+    "ast_hash": "9b7114137765f2ad010e52bcf606c542",
+    "semantic_hash": ""
+  },
+  "installer/src/config/user.rs": {
+    "mtime": 1782144939.8862112,
+    "ast_hash": "c9ff89a9244ddc1e5ee7f60d75f783ae",
+    "semantic_hash": ""
+  },
+  "installer/src/disk/format.rs": {
+    "mtime": 1782144939.8862112,
+    "ast_hash": "5246bf496836728a25cd869e51792521",
+    "semantic_hash": ""
+  },
+  "installer/src/disk/mod.rs": {
+    "mtime": 1782144939.8863611,
+    "ast_hash": "2b01bd6f2c7714817a0ba171a46ea4db",
+    "semantic_hash": ""
+  },
+  "installer/src/disk/partition.rs": {
+    "mtime": 1782144939.8863611,
+    "ast_hash": "e76b61b709ae6b405ece18eb03a33a9e",
+    "semantic_hash": ""
+  },
+  "installer/src/disk/probe.rs": {
+    "mtime": 1782144939.8863611,
+    "ast_hash": "e625198f85e34e02c242b315280c7ed5",
+    "semantic_hash": ""
+  },
+  "installer/src/install/bootloader.rs": {
+    "mtime": 1782144939.8863611,
+    "ast_hash": "c40fc854bdcb32dd7b6bed76e0e3a619",
+    "semantic_hash": ""
+  },
+  "installer/src/install/chroot.rs": {
+    "mtime": 1782144939.8865373,
+    "ast_hash": "5f359a71f1a50cf5b4e65fff0f207777",
+    "semantic_hash": ""
+  },
+  "installer/src/install/deploy.rs": {
+    "mtime": 1782144939.8865373,
+    "ast_hash": "e4030ae19bf0419c8d9bf7d47770767c",
+    "semantic_hash": ""
+  },
+  "installer/src/install/fstab.rs": {
+    "mtime": 1782144939.8865373,
+    "ast_hash": "36c1bc6d5c741916cb3c8a4ec83ba3c5",
+    "semantic_hash": ""
+  },
+  "installer/src/install/mod.rs": {
+    "mtime": 1782144939.8865373,
+    "ast_hash": "0f70051201b80472a22e48a14eecb1fd",
+    "semantic_hash": ""
+  },
+  "installer/src/main.rs": {
+    "mtime": 1782144939.8865373,
+    "ast_hash": "8ed8e9f7511747e8d979d1d0e7ebd2b7",
+    "semantic_hash": ""
+  },
+  "installer/src/ui/app.rs": {
+    "mtime": 1782144939.8865373,
+    "ast_hash": "8c796ac92911b1d122b89558a1667349",
+    "semantic_hash": ""
+  },
+  "installer/src/ui/disk.rs": {
+    "mtime": 1782144939.8867753,
+    "ast_hash": "2df3ccd32244829f6cf41e665d633d30",
+    "semantic_hash": ""
+  },
+  "installer/src/ui/locale.rs": {
+    "mtime": 1782144939.8867753,
+    "ast_hash": "f1867f36f74d2c20cd830455f7f62f4d",
+    "semantic_hash": ""
+  },
+  "installer/src/ui/mod.rs": {
+    "mtime": 1782144939.8867753,
+    "ast_hash": "f3fb17d2071d066aaece9dc9a737bf39",
+    "semantic_hash": ""
+  },
+  "installer/src/ui/progress.rs": {
+    "mtime": 1782144939.8867753,
+    "ast_hash": "d4bce5dd28918197390726c06d34a45d",
+    "semantic_hash": ""
+  },
+  "installer/src/ui/summary.rs": {
+    "mtime": 1782144939.8867753,
+    "ast_hash": "f6ed2ae118572da1ba3931ab936bac9d",
+    "semantic_hash": ""
+  },
+  "installer/src/ui/user.rs": {
+    "mtime": 1782144939.8867753,
+    "ast_hash": "3a3c3ea8bd8623f05eab3a52953769f6",
+    "semantic_hash": ""
+  },
+  "installer/src/ui/welcome.rs": {
+    "mtime": 1782144939.8867753,
+    "ast_hash": "e3f135f1093538dbed3658fb1a5fd694",
+    "semantic_hash": ""
+  },
+  "kernel/output/6.12/build.json": {
+    "mtime": 1782237554.384173,
+    "ast_hash": "1c99e759c84ff24b39c9cf24c2e135e3",
+    "semantic_hash": ""
+  },
+  "kernel/output/6.18/build.json": {
+    "mtime": 1782158262.8844347,
+    "ast_hash": "c084bb2a0aaf09588f3ae6981488435c",
+    "semantic_hash": ""
+  },
+  "kernel/output/7.0/build.json": {
+    "mtime": 1782158414.4526105,
+    "ast_hash": "0858937f4baf03e29bc06534819f2485",
+    "semantic_hash": ""
+  },
+  "kernel/output/7.1/build.json": {
+    "mtime": 1782158945.563041,
+    "ast_hash": "c142203b5e685c396ef9dc7f1107f5b2",
+    "semantic_hash": ""
+  },
+  "kernel/scripts/apply-patches.sh": {
+    "mtime": 1782144939.8951974,
+    "ast_hash": "954d7d4052fbae4b1a208175223ccece",
+    "semantic_hash": ""
+  },
+  "kernel/scripts/build-kernel.sh": {
+    "mtime": 1782158868.3811755,
+    "ast_hash": "9406a734583684ac89d13a60429a7a56",
+    "semantic_hash": ""
+  },
+  "kernel/scripts/manage-kernels.sh": {
+    "mtime": 1782144939.8953655,
+    "ast_hash": "6eaa5883dc63e87e603e69cb80e61dd0",
+    "semantic_hash": ""
+  },
+  "kernel/versions.json": {
+    "mtime": 1782157004.5923364,
+    "ast_hash": "6ac3eaf5e0c18df2219e06c59458d0e5",
+    "semantic_hash": ""
+  },
+  "metadata/aliases.json": {
+    "mtime": 1782144939.9017131,
+    "ast_hash": "83963f2ec7d17c7368a39760c7bc6460",
+    "semantic_hash": ""
+  },
+  "metadata/packages/browsers.json": {
+    "mtime": 1782144939.9017131,
+    "ast_hash": "c7a20621656c8b769f11a46eefefbebf",
+    "semantic_hash": ""
+  },
+  "metadata/packages/core.json": {
+    "mtime": 1782144939.902919,
+    "ast_hash": "c8811b926b086bca199040614920285e",
+    "semantic_hash": ""
+  },
+  "metadata/packages/dev.json": {
+    "mtime": 1782144939.902919,
+    "ast_hash": "99c65f2d68a6509162c0501534a5b7ee",
+    "semantic_hash": ""
+  },
+  "metadata/schema.json": {
+    "mtime": 1782144939.902919,
+    "ast_hash": "f7a1d57f62d77f36775c09b943dcbae7",
+    "semantic_hash": ""
+  },
+  "scripts/bootstrap.sh": {
+    "mtime": 1782144736.9536839,
+    "ast_hash": "46914a8a73c756863f5fa2b930e14da1",
+    "semantic_hash": ""
+  },
+  "scripts/check-deps.sh": {
+    "mtime": 1782147040.9195414,
+    "ast_hash": "37a678aff2bfa1abf6c2db54441dbf7d",
+    "semantic_hash": ""
+  },
+  "tooling/scripts/ci-check.sh": {
+    "mtime": 1782144939.909713,
+    "ast_hash": "cae28baac370171805407771c7d2fdf8",
+    "semantic_hash": ""
+  },
+  "tooling/scripts/gen-package.sh": {
+    "mtime": 1782144939.910295,
+    "ast_hash": "2dee202ce89376d9d7130d216f7b1079",
+    "semantic_hash": ""
+  },
+  "tooling/scripts/release.sh": {
+    "mtime": 1782236627.5150652,
+    "ast_hash": "bfefe36f78c6db74d9e514803a651865",
+    "semantic_hash": ""
+  },
+  "CHANGELOG.md": {
+    "mtime": 1782157756.2332523,
+    "ast_hash": "7f3b49339a003e42c4e035c315691eb4",
+    "semantic_hash": ""
+  },
+  "CONTRIBUTING.md": {
+    "mtime": 1782144736.9492295,
+    "ast_hash": "086339612f8f016d373889d74f2b9918",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1782147721.127641,
+    "ast_hash": "98523951899cdc5a37c20743e141cf6b",
+    "semantic_hash": ""
+  },
+  "branding/README.md": {
+    "mtime": 1782144921.1265783,
+    "ast_hash": "c1cbcacf462f57ab3c431977e2dfc0d4",
+    "semantic_hash": ""
+  },
+  "branding/grub/centrex-theme/theme.txt": {
+    "mtime": 1782144921.1272922,
+    "ast_hash": "33c0bc20483412e9e7e4d5f6072af8ac",
+    "semantic_hash": ""
+  },
+  "core/README.md": {
+    "mtime": 1782237880.5783129,
+    "ast_hash": "87c3232c8db79da84af6f76800680d43",
+    "semantic_hash": ""
+  },
+  "core/cxp/README.md": {
+    "mtime": 1782144939.8540552,
+    "ast_hash": "4ebed627e90a7fa018184c2d8ce15409",
+    "semantic_hash": ""
+  },
+  "desktop-gnome/README.md": {
+    "mtime": 1782144939.861713,
+    "ast_hash": "8aa5796e064512ba7b1d573519f447f1",
+    "semantic_hash": ""
+  },
+  "desktop-kde/README.md": {
+    "mtime": 1782144939.868713,
+    "ast_hash": "42bb70b03dd9f7c910b1b68e2ffd64c4",
+    "semantic_hash": ""
+  },
+  "docs/README.md": {
+    "mtime": 1782157891.6804411,
+    "ast_hash": "7c9c895c8d7455c85212ad3fe9d70a75",
+    "semantic_hash": ""
+  },
+  "docs/architecture.md": {
+    "mtime": 1782237989.1222572,
+    "ast_hash": "820015c1dd1c35ded6c87e7b8acd380a",
+    "semantic_hash": ""
+  },
+  "docs/developer-guide.md": {
+    "mtime": 1782238107.815132,
+    "ast_hash": "c40c9e8690cce92cf57db5d943b21a44",
+    "semantic_hash": ""
+  },
+  "docs/getting-started.md": {
+    "mtime": 1782144939.877713,
+    "ast_hash": "818016b6375bef6d1a2806932b0f0971",
+    "semantic_hash": ""
+  },
+  "installer/README.md": {
+    "mtime": 1782144939.885713,
+    "ast_hash": "d96fbcbb5266cd2827e1bed3b2847c6e",
+    "semantic_hash": ""
+  },
+  "kernel/CHANGELOG.md": {
+    "mtime": 1782157801.9962766,
+    "ast_hash": "c1695ddd3be77a89eeb8ce80fb43b206",
+    "semantic_hash": ""
+  },
+  "kernel/README.md": {
+    "mtime": 1782157879.1092088,
+    "ast_hash": "188ea9e597cb24bcc84922c6e2dde328",
+    "semantic_hash": ""
+  },
+  "metadata/README.md": {
+    "mtime": 1782144939.9017131,
+    "ast_hash": "6afeba42cdb256b13144dfb48b6ccebb",
+    "semantic_hash": ""
+  },
+  "tooling/README.md": {
+    "mtime": 1782144939.909713,
+    "ast_hash": "8c6add2509f556baf182eeb6cf1a0d4e",
+    "semantic_hash": ""
+  },
+  "tooling/ci/build.yml": {
+    "mtime": 1782144939.909713,
+    "ast_hash": "79fccb60d2079064d079529ef1dffd28",
+    "semantic_hash": ""
+  },
+  "branding/logo/centrexos-white.svg": {
+    "mtime": 1782144921.1272922,
+    "ast_hash": "d1150225b576bada4d4f790f4b2bcc10",
+    "semantic_hash": ""
+  },
+  "branding/logo/centrexos.svg": {
+    "mtime": 1782144921.1274495,
+    "ast_hash": "32ae86d579c60994869236c32063e545",
+    "semantic_hash": ""
+  }
 }
